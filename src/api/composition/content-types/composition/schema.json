@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compositions",
+  "info": {
+    "singularName": "composition",
+    "pluralName": "compositions",
+    "displayName": "Composition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "compositions"
+    }
+  }
+}
